@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    background-color: #efefef;
+    background-color: #18172c;
     font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -68,62 +68,32 @@ body {
 }
 
 .main-container {
-    margin-top: 80px;;
-    display: flex;
-    justify-content: center;
+    margin-top: 80px;
 }
 
-.product-detail {
+.presentation-container {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.image-detail img {
-    width: 360px;
-    object-fit: cover;
-    border-radius: 16px;
-}
-
-.info-container {
-    display: flex;
-    justify-content: center;
-    gap: 36px;
     place-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
 }
 
-.info-detail {
-    font-size: larger ;
-}
-
-.description-detail {
-    display: flex;
-    gap: 24px;
-    place-items: center;
-    text-align: justify;
-}
-
-.description-detail p {
-    width: 360px;
-    font-size: 16pt;
-}
-
-.description-detail a {
-    display: flex;
-    justify-content: end;
-    text-decoration: none;
-}
-
-.btn-whatsapp {
-    width: 150px;
-    height: 70px;
-    border-radius: 8px;
-    border: none;
+.presentation-image {
     background-color: var(--red);
-    font-size: 20pt;
-    font-family: 'Bebas Neue', sans-serif;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.presentation-image img {
+    width: 100%;
+}
+
+.presentation-text {
+    width: 50%;
+    font-size: 24pt;
+    text-align: justify;
     color: white;
-    cursor: pointer;
 }
 
 .footer-container {
@@ -165,40 +135,4 @@ body {
 .foot-right img {
     width: 40px;
     height: 40px;
-}
-
-@media (max-width: 640px) {
-    .info-container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .image-detail img {
-        width: 100%;
-    }
-
-    .footer-container {
-        position: relative;
-    }
-
-    .info-detail {
-        display: grid;
-        grid-template-columns: repeat(2, 200px);
-        place-items: initial;
-    }
-
-    .info-detail p {
-        margin: 0;
-        margin-bottom: 24px;
-    }
-
-    .product-detail {
-        place-items: center;
-    }
-
-    .description-detail {
-        flex-direction: column;
-        gap: 8px;
-        margin-bottom: 12px;
-    }
 }
