@@ -1,54 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="css/about.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.8, maximum-scale=0.8, minimum-scale=0.8">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=Didact+Gothic&display=swap" rel="stylesheet">
     <title>Autosales</title>
+    <link rel="icon" href="images/icons/logo-round.ico" type="image/x-icon">
 </head>
 <body>
     <nav class="index-nav">
         <div class="left-nav">
             <a href="index.html">
-                <img src="images/logos/logo.svg" class="home-img">
+                <img src="/images/logos/logo.svg" class="home-img">
             </a>
         </div>
-        <div class="center-nav">
-            <a href="index.html">Home</a>
-            <a href="inventory.html">Inventory</a>
-            <a href="">About us</a>
-            <a href="">FAQ</a>
+        <button class="nav-open" id="btn_open"><i class="bi bi-list"></i></button>
+        <div class="center-nav" id="nav">
+            <div class="burguer-menu">
+                <button class="nav-close" id="btn_close"><i class="bi bi-x"></i></button>
+                <ul class="nav-list">
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="inventory.html">INVENTORY</a>
+                    </li>
+                    <li>
+                        <a href="about.html">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-lang-mobile">
+                        <a href="es/about.html" class="lang-selector">
+                            <img src="/images/icons/mx.svg" alt="">
+                            <p>ESPAÑOL</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="right-nav">
-            <a href="">Contact Us</a>
+            <a href="es/about.html" class="lang-selector">
+                <img src="/images/icons/mx.svg" alt="">
+                <p>ESPAÑOL</p>
+            </a>
         </div>
     </nav>
 
     <div class="main-container">
         <div class="presentation-container">
             <div class="presentation-image">
-                <img src="images/logos/logo.svg">
+                <img src="images/misc/front.jpg">
             </div>
             <div class="presentation-text">
                 <p>
-                    somos la mejor opcion automotriz de todo california
-                    con grandes ventajas sobre nuestros competidores
-                    contamos con financiamiento en todos nuestro vehiculos
-                    y somos como un padre para ti, te cuidamos a ti y a tu
-                    vehiculo, con el mejor trato de todo estados unidos, tu
-                    eres nuestra primera prioridad siempre
+                    Somos un concesionario comprometido a encontrar 
+                    el auto que cumpla con las  características 
+                    necesarias  para adaptarse a tu día a día, tu 
+                    trabajo o tu familia
                 </p>
             </div>
         </div>
     </div>
 
-    <div class="mapouter">
-        <div class="gmap_canvas">
-            <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=University of Oxford&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-            <a href="https://connectionsgame.org/">Connections Game</a>
+    <div class="map-container">
+        <p>FIND US</p>
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="640" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=110+Gentry+Memorial+Hwy%2C+Easley%2C+SC+29640%2C+Estados+Unidos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://online.stopwatch-timer.net/">timer stopwatch</a><br><a href="https://textcaseconvert.com/"></a><br><style>.mapouter{position: relative;text-align: right;height: 360px;width: 640px;}</style><a href="https://www.embedmaps.co">embed google maps api</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 360px;width: 640px;}</style>
+            </div>
         </div>
-        <style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:400px!important;}</style>
     </div>
 
     <footer class="footer-container">
@@ -58,16 +87,18 @@
         </div>
         <div class="foot-center">
             <p>Contact us!</p>
+            <p>110 Gentry Memorial Hwy, Easley, SC 29640, United States</p>
         </div>
         <div class="foot-right">
-            <a href="https://www.instagram.com/loualex128/">
+            <a href="https://www.instagram.com/pmautosc/">
                 <img src="images/logos/logo-ig.svg">
             </a>
-
-            <a href="https://www.facebook.com/ernestoalejandrop/">
+            
+            <a href="https://www.facebook.com/profile.php?id=100093344975249">
                 <img src="images/logos/logo-fb.png" alt="">
             </a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

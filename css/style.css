@@ -7,75 +7,283 @@
 
 body {
     margin: 0;
-    background-color: #efefef;
+    padding: 0;
+    background-color: #04001f;
+    font-family: 'Didact Gothic', sans-serif;
+    color: white;
+}
+
+/* This grid is to avoid that the slider shows in front
+of the navbar in the mobile version of the page
+note: This only happens in this page */
+.positioning-grid {
+    display: grid;
+}
+
+.index-nav {
+    grid-row: 1;
+}
+
+.slider-container{
+    grid-row: 2;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    overflow: hidden;    
+    position: relative;
+}
+
+.slider-container ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 400%;
+    animation: slide 15s infinite forwards ease-in-out;
+}
+
+.slider-container li {
+    list-style: none;
+    width: 100%;
+}
+
+.slider-container img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+}
+
+.slider-text {
+    background: linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(4,0,31,1) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: end;
+    top: 0;
+    right: 0;
+}
+
+.slider-button {
+    width: auto;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    height: auto;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--red);
+    font-size: 12pt;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+button:hover {
+    background-color: var(--dark-red);
+}
+
+.slider-text-container {
+    text-align: end;
+    margin-right: 2rem;
+}
+
+.slider-text h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48pt;
+    margin: 0;
+}
+
+.slider-text h1:nth-child(1) {
+    font-size: 41pt;
+}
+
+.slider-text p {
+    margin: 0;
+    font-size: 16pt;
+}
+
+.main-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.language-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 48pt;
     font-family: 'Bebas Neue', sans-serif;
 }
 
-
-.index-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto;
-    padding: 5px;
-    background-color: var(--dark-red);
-    font-size: 18pt;
+.language-container h1 {
+    margin: 0;
+    margin-top: 2rem;
 }
 
-.index-nav a {
+.language-button {
+    width: auto;
+    padding: 1rem;
+    height: 70px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--red);
+    font-size: 20pt;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.bestseller-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.bestseller-container a {
     text-decoration: none;
     color: white;
 }
 
-.index-nav a:hover {
+.bestseller-container h2 {
+    text-align: center;
+    font-size: 24pt;
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.bestseller-grid {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    margin-bottom: 16px;
+}
+
+.product-card {
+    background-color: var(--dark-red);
+    width: 240px;
+    border-radius: 8px;
+}
+
+.card-image  img{
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+}
+
+.card-info p {
+    margin: 0 4px;
+}
+
+.card-info p:nth-child(1) {
+    font-size: 20pt;
+}
+
+.card-info p:nth-child(2) {
+    margin-bottom: 8px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.inventory-button {
+    width: auto;
+    padding: 1rem;
+    height: 70px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--red);
+    font-size: 20pt;
+    color: white;
     cursor: pointer;
-    color: var(--gray);
+}
+
+.offer-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-size: 24pt;
+}
+
+.offer-container {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    place-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.offer-container img {
+    width: 420px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.offer-detail {
+    font-size: 20pt;
+}
+
+.offer-detail p {
+    margin: 1rem 0;
+}
+
+.doubts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    margin: 0 0 2rem 0;
+}
+
+.doubts-container h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.doubts-container button {
+    width: auto;
+    padding: 1rem;
+    height: 70px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--red);
+    font-size: 20pt;
+    color: white;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.left-nav {
-    grid-column: 1;
-    display: flex;
-    place-items: center;
-}
-
-.center-nav {
-    grid-column: 2;
-    display: flex;
-    place-items: center;
-    justify-content: center;
-    gap: 20px;
-    color: white;
-}
-
-.right-nav {
-    grid-column: 3;
-    display: flex;
-    place-items: center;
-    justify-content: end;
-    margin-right: 20px;
-}
-
-.home-img {
-    width: 100px;
-    padding: 0;
-    margin-right: 0;
-}
-
-.home-img:hover {
-    cursor: pointer;
-}
-
-.main-container {
-    margin-top: 80px;
-    background-color: var(--red);
+.doubts-container button:hover {
+    background-color: var(--dark-red);
+    transition: 0.3s;
 }
 
 .footer-container {
     display: grid;
     grid-template-columns: auto;
-    position: absolute;
+    position: relative;
     bottom: 0;
     margin: 0;
     width: 100%;
@@ -86,17 +294,27 @@ body {
 }
 
 .foot-left {
+    display: flex;
+    flex-direction: column;
     grid-column: 1;
     margin-left: 10px;
     display: flex;
-    gap: 10px;
+    gap: 0.3rem;
+}
+.foot-left p {
+    margin: 0;
 }
 
 .foot-center {
     grid-column: 2;
     display: flex;
+    flex-direction: column;
     place-items: center;
     justify-content: center;
+}
+
+.foot-center p {
+    margin: 0;
 }
 
 .foot-right {
@@ -111,4 +329,55 @@ body {
 .foot-right img {
     width: 40px;
     height: 40px;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+}
+
+@media (max-width: 640px){
+
+    .bestseller-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 160px);
+    }
+
+    .slider-container img {
+        height: 360px;
+    }
+
+    .product-card {
+        width: 160px;
+    }
+
+    .card-info p:nth-child(1){
+        font-size: 16pt;
+    }
+
+    .card-image img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .offer-container {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
 }

@@ -7,8 +7,8 @@
 
 body {
     margin: 0;
-    background-color: #efefef;
-    font-family: 'Bebas Neue', sans-serif;
+    background-color: #04001f;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 
@@ -71,6 +71,7 @@ body {
     margin-top: 80px;;
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 .product-detail {
@@ -129,7 +130,7 @@ body {
 .footer-container {
     display: grid;
     grid-template-columns: auto;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     margin: 0;
     width: 100%;
@@ -140,17 +141,27 @@ body {
 }
 
 .foot-left {
+    display: flex;
+    flex-direction: column;
     grid-column: 1;
     margin-left: 10px;
     display: flex;
-    gap: 10px;
+    gap: 0.3rem;
+}
+.foot-left p {
+    margin: 0;
 }
 
 .foot-center {
     grid-column: 2;
     display: flex;
+    flex-direction: column;
     place-items: center;
     justify-content: center;
+}
+
+.foot-center p {
+    margin: 0;
 }
 
 .foot-right {
@@ -199,6 +210,15 @@ body {
     .description-detail {
         flex-direction: column;
         gap: 8px;
-        margin-bottom: 12px;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        justify-content: center;
+        gap: 24px;
     }
 }
