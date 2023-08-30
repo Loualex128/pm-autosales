@@ -356,6 +356,26 @@ button:hover {
         height: 360px;
     }
 
+    .slider-text-container {
+        margin-right: 1rem;
+    }
+
+    .slider-text h1{
+        font-size: 24pt;
+    }
+
+    .slider-text h1:nth-child(1) {
+        font-size: 23pt;
+    }
+
+    .slider-text p {
+        font-size: 12pt;
+    }
+
+    .slider-button {
+        margin-right: 0.5rem;
+    }
+
     .product-card {
         width: 160px;
     }
