@@ -59,6 +59,8 @@ body {
 
 .card-info p:nth-child(1) {
     font-size: 20pt;
+    text-wrap: nowrap;
+    overflow: hidden;
 }
 
 .card-info p:nth-child(2) {
@@ -68,7 +70,7 @@ body {
 .footer-container {
     display: grid;
     grid-template-columns: auto;
-    position: sticky;
+    position: relative;
     bottom: 0;
     margin: 0;
     width: 100%;
